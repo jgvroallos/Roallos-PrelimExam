@@ -1,0 +1,10 @@
+---
+ - hosts: all
+   become: true
+   vars:
+     motd: "Ansible managed node by roallos-ubuntu"
+
+   tasks:
+
+   - name: Variables
+

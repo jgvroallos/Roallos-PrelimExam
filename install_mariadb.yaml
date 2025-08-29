@@ -2,3 +2,9 @@
  - hosts: all
    become: true
    tasks:
+
+   - name: Install MariaDB
+     apt:
+       name: 
+        - mariadb-server
+       state: latest
