@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Install Latest Java open-jdk Packages
+    apt:
+      name:
+       - default-jre 
+       - default-jdk
+      state: latest
+    update_cache: yes

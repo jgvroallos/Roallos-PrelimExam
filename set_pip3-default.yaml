@@ -1,0 +1,14 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+
+    - name: Set Pip3 as Default
+      shell: alias pip=pip3 >> ~/.bashrc
+      register: sh_output
+
+    - name: Display Output to CN
+      debug:
+        msg: "{{ sh_output }}"
+
+
